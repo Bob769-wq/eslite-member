@@ -1,7 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { NonNullableFormBuilder, ReactiveFormsModule } from '@angular/forms';
-import { MatIcon } from '@angular/material/icon';
 
 interface NavList {
   id: number;
@@ -19,7 +18,7 @@ interface SubMenu {
 
 @Component({
   selector: 'app-header',
-  imports: [RouterLink, ReactiveFormsModule, MatIcon],
+  imports: [RouterLink, ReactiveFormsModule],
   template: `
     <div class="hidden overflow-hidden rounded-md lg:block mb-5">
       <a routerLink="member-day">
@@ -52,7 +51,7 @@ interface SubMenu {
 
     <div class="flex items-center justify-between gap-8 w-full">
       <div class="max-w-[250px] flex-1">
-        <a><img src="/logo.png" alt="logo" /></a>
+        <a routerLink="/home"><img src="/logo.png" alt="logo" /></a>
       </div>
       <div class="max-w-[710px] flex-1">
         <form [formGroup]="form" class="flex w-full pb-[10px]">
