@@ -11,7 +11,9 @@ interface NavList {
 
 interface SubMenu {
   id: number;
-  title: string;
+  title1: string;
+  title2?: string;
+  title3?: string;
   link: string;
   children?: SubMenu[];
 }
@@ -124,6 +126,34 @@ interface SubMenu {
                 class="absolute top-full h-1 w-0 bg-[#212224] group-hover:w-full transition-all duration-300"
               ></div>
             </a>
+            <div
+              class="absolute top-[115%] border border-[#917e57] py-6 w-[212px] bg-white hidden group-hover:block"
+            >
+              <div class="flex flex-col h-[476px] justify-evenly">
+                @for (sub of item.children; track sub.id) {
+                  @if (sub.link === '/e-book') {
+                    <div
+                      class="flex h-7 px-4 py-1 text-sm font-bold hover:text-[#917E57] hover:bg-[#F7F5EF] text-[#454545]"
+                    >
+                      <a [routerLink]="sub.link" class="hover:underline">{{ sub.title1 }}</a>
+                      <span>・</span>
+                      <a [routerLink]="sub.link" class="hover:underline">{{ sub.title2 }}</a>
+                      <span class="px-1 h-5 rounded bg-[#FFF3E0] text-[#F39B13] ml-2">New</span>
+                    </div>
+                  } @else {
+                    <div
+                      class="flex h-7 px-4 py-1 text-sm font-bold hover:text-[#917E57] hover:bg-[#F7F5EF] text-[#454545]"
+                    >
+                      <a [routerLink]="sub.link" class="hover:underline">{{ sub.title1 }}</a>
+                      <span>・</span>
+                      <a [routerLink]="sub.link" class="hover:underline">{{ sub.title2 }}</a>
+                      <span>・</span>
+                      <a [routerLink]="sub.link" class="hover:underline">{{ sub.title3 }}</a>
+                    </div>
+                  }
+                }
+              </div>
+            </div>
           </li>
         } @else {
           <li class="relative group">
@@ -194,7 +224,98 @@ export class Header {
       id: 1,
       title: '全站分類',
       link: '/types',
-      children: [],
+      children: [
+        {
+          id: 1,
+          title1: '電子書',
+          title2: '新手上路',
+          link: '/e-book',
+        },
+        {
+          id: 2,
+          title1: '中文書',
+          title2: '主打書',
+          title3: '強檔預購',
+          link: '/book',
+        },
+        {
+          id: 3,
+          title1: '外文書',
+          title2: '日文書',
+          title3: '塔羅館',
+          link: '/book',
+        },
+        {
+          id: 4,
+          title1: '雜誌',
+          title2: '影音',
+          title3: '影音預購',
+          link: '/book',
+        },
+        {
+          id: 5,
+          title1: '童書',
+          title2: '外文童書',
+          title3: '編輯推薦',
+          link: '/book',
+        },
+        {
+          id: 6,
+          title1: '親子用品',
+          title2: 'Jellycat',
+          title3: '開學',
+          link: '/book',
+        },
+        {
+          id: 7,
+          title1: '文具潮藝',
+          title2: '手帳',
+          title3: '理想文具',
+          link: '/book',
+        },
+        {
+          id: 8,
+          title1: '服飾鞋包',
+          title2: '行李箱',
+          title3: '精品',
+          link: '/book',
+        },
+        {
+          id: 9,
+          title1: '美妝保養',
+          title2: '香水',
+          title3: '臉部保養',
+          link: '/book',
+        },
+        {
+          id: 10,
+          title1: '休閒戶外',
+          title2: '露營',
+          title3: '運動瑜伽',
+          link: '/book',
+        },
+        {
+          id: 11,
+          title1: '生活家居',
+          title2: '日用品',
+          title3: '餐廚',
+          link: '/book',
+        },
+        {
+          id: 12,
+          title1: '食品',
+          title2: '保健',
+          title3: '醫護輔具',
+          link: '/book',
+        },
+        {
+          id: 13,
+          title1: '3C通訊',
+          title2: '家電',
+          title3: '相機攝影',
+          link: '/book',
+        },
+      ],
     },
     {
       id: 2,
