@@ -19,7 +19,9 @@ interface CardList {
           <div class="flex items-center justify-between p-4 border-b border-b-[#eeeeee]">
             <div class="flex items-center gap-[18px]">
               <div class="w-7"><img src="/points-card.png" alt="points-card" class="w-full" /></div>
-              <p class="text-lg font-medium">誠品點<span>0</span>點</p>
+              <p class="text-lg font-medium">
+                誠品點<span class="text-[#A58B54] text-2xl"> 0 </span>點
+              </p>
             </div>
             <mat-icon class="text-sm">arrow_forward_ios</mat-icon>
           </div>
@@ -30,7 +32,9 @@ interface CardList {
               <div class="w-7">
                 <img src="/favorite-card.png" alt="points-card" class="w-full" />
               </div>
-              <p class="text-lg font-medium">收藏商品<span>0</span>項</p>
+              <p class="text-lg font-medium">
+                收藏商品<span class="text-[#A58B54] text-2xl"> 0 </span>項
+              </p>
             </div>
             <mat-icon class="text-sm">arrow_forward_ios</mat-icon>
           </div>
@@ -39,7 +43,9 @@ interface CardList {
           <div class="flex items-center justify-between p-4 border-b border-b-[#eeeeee]">
             <div class="flex items-center gap-[18px]">
               <div class="w-7"><img src="/coupon-card.png" alt="points-card" class="w-full" /></div>
-              <p class="text-lg font-medium">優惠券<span>0</span>張</p>
+              <p class="text-lg font-medium">
+                優惠券<span class="text-[#A58B54] text-2xl"> 0 </span>張
+              </p>
             </div>
             <mat-icon class="text-sm">arrow_forward_ios</mat-icon>
           </div>
@@ -48,7 +54,9 @@ interface CardList {
           <div class="flex items-center justify-between p-4 border-b border-b-[#eeeeee]">
             <div class="flex items-center gap-[18px]">
               <div class="w-7"><img src="/notify-card.png" alt="points-card" class="w-full" /></div>
-              <p class="text-lg font-medium">貨到通知<span>0</span>項</p>
+              <p class="text-lg font-medium">
+                貨到通知<span class="text-[#A58B54] text-2xl"> 0 </span>項
+              </p>
             </div>
             <mat-icon class="text-sm">arrow_forward_ios</mat-icon>
           </div>

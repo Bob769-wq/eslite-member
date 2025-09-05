@@ -27,20 +27,26 @@ interface SubMenu {
     </div>
     <div class="flex justify-between items-center mb-5 h-[30px]">
       <ul class="flex font-medium">
-        <li class="my-1 pr-3 border-r border-r-[#cccccc] text-[#454545] hover:underline">回首頁</li>
-        <li class="my-1 pl-3 text-[#454545] hover:underline">APP下載</li>
+        <li
+          class="my-1 pr-3 border-r border-r-[#cccccc] text-[#454545] hover:underline cursor-pointer"
+        >
+          <a routerLink="/home">回首頁</a>
+        </li>
+        <li class="my-1 pl-3 text-[#454545] hover:underline cursor-pointer">
+          <a routerLink="/download">APP下載</a>
+        </li>
       </ul>
       <ul class="flex">
         @for (item of navItems; track item.id) {
           @if (item.link === '/cart') {
-            <li class="font-medium my-1 px-3 text-[#454545] hover:text-[#917E57]">
+            <li class="font-medium my-1 px-3 text-[#454545] hover:text-[#917E57] cursor-pointer">
               <a [routerLink]="item.link"
                 >{{ item.title }}(<span class="text-[#917E57]">0</span>)</a
               >
             </li>
           } @else {
             <li
-              class="font-medium my-1 px-3 border-r border-r-[#cccccc] text-[#454545] hover:text-[#917E57]"
+              class="font-medium my-1 px-3 border-r border-r-[#cccccc] text-[#454545] hover:text-[#917E57] cursor-pointer"
             >
               <a [routerLink]="item.link">{{ item.title }}</a>
             </li>
@@ -90,7 +96,7 @@ interface SubMenu {
         </div>
       </div>
       <div class="max-w-[250px] flex-1">
-        <a><img src="/coupon.png" alt="coupon" /></a>
+        <a routerLink="/coupon"><img src="/coupon.png" alt="coupon" /></a>
       </div>
     </div>
 

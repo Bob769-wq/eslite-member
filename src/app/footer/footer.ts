@@ -61,7 +61,7 @@ interface FooterList {
           </ul>
         </div>
         <div class="px-4">
-          <h3 class="text-lg font-medium">訂閱誠品線上電子報</h3>
+          <h3 class="text-lg font-medium mt-2">訂閱誠品線上電子報</h3>
           <ul class="mt-2">
             @for (item of subscribe; track item.id) {
               <li class="hover:underline">
@@ -98,7 +98,7 @@ interface FooterList {
           </div>
         </div>
         <div class="px-4">
-          <h3 class="text-lg font-medium">誠品APP</h3>
+          <h3 class="text-lg font-medium mt-2">誠品APP</h3>
           <div class="flex flex-col gap-2">
             <a routerLink="/footer" class="max-w-[140px]">
               <img src="/app-store-footer.webp" alt="app" />
